@@ -13,9 +13,18 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
         <script language="javascript">
-        // get host name
-        host=document.domain;  </script>
+            // get host name
+            host=document.domain;
 
+            // reCAPTCHA required
+            window.onload = function() { 
+              var el = document.getElementById('g-recaptcha-response'); 
+              if (el) { 
+                el.setAttribute('required', 'required'); 
+              } 
+            }
+        </script>
+  
         <!-- reCAPTCHA Javascript -->
         <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
 
