@@ -12,9 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-<script language="javascript">
-// get host name
-host=document.domain; </script>
+        <script language="javascript">
+        // get host name
+        host=document.domain;  </script>
+
+        <!-- reCAPTCHA Javascript -->
+        <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
 
 	</head>
 	<body class="is-preload">
@@ -98,6 +101,8 @@ host=document.domain; </script>
 
   <!-- your other form fields go here -->
 
+    <div class="g-recaptcha" data-sitekey="6Le4bHoaAAAAAJthb_42oTAfDMx7HHjFaKgAUqgM"></div>
+    <br/>
 
   <button type="submit">Send</button>
 </form>
