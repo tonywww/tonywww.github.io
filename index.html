@@ -16,6 +16,11 @@
             // get host name
             host=document.domain;
 
+            // recaptcha v2 invisible
+            function onSubmit(token) {
+              document.getElementById("contact-form").submit();
+            }
+
             // reCAPTCHA required
             window.onload = function() { 
               var el = document.getElementById('g-recaptcha-response'); 
@@ -92,6 +97,7 @@
 <!-- modify this form HTML and place wherever you want your form -->
 
 <form
+  id='contact-form' 
   action="https://formspree.io/f/mbjpnyek"
   method="POST"
 >
@@ -110,10 +116,14 @@
 
   <!-- your other form fields go here -->
 
-    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Le4bHoaAAAAAJthb_42oTAfDMx7HHjFaKgAUqgM"></div>
-    <br/>
+<!-- reCAPTCHA v2 checkbox -->
+<!--    <div class="g-recaptcha" data-theme="dark" data-sitekey="6Le4bHoaAAAAAJthb_42oTAfDMx7HHjFaKgAUqgM"></div>  -->
+<!--    <br/>  -->
+<!--  <button type="submit">Send</button>  -->
 
-  <button type="submit">Send</button>
+<!-- reCAPTCHA v2 invisible -->
+    <button class="g-recaptcha" data-theme="dark" data-sitekey="6Le4bHoaAAAAAJthb_42oTAfDMx7HHjFaKgAUqgM" data-callback='onSubmit'>Send</button>
+
 </form>
 
 
