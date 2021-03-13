@@ -28,6 +28,10 @@
                 el.setAttribute('required', 'required'); 
               } 
             }
+            
+            .grecaptcha-badge { 
+    visibility: hidden;
+}
         </script>
   
         <!-- reCAPTCHA Javascript -->
@@ -126,14 +130,23 @@
 
 </form>
 
-
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-							</article>
+
+<!-- hidden reCAPTCHA icon  -->
+<font size="1">
+    This site is protected by reCAPTCHA and the Google
+    <a target="_blank" href="https://policies.google.com/privacy">Privacy Policy</a> and 
+    <a target="_blank" href="https://policies.google.com/terms">Terms of Service</a> apply.</font>
+<style>
+    .grecaptcha-badge { visibility: hidden; }
+</style>
+
+                            </article>
 
 						<!-- Elements -->
 							<article id="elements">
